@@ -134,5 +134,14 @@ namespace TestElectronico
             frmrespuestas.MdiParent = this;
             frmrespuestas.Show();
         }
+
+        private void usuariosAdminsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Utilidades.FrmUsuarioAdministrador frmusuario = new Utilidades.FrmUsuarioAdministrador();
+
+            frmusuario.MdiParent = this;
+            frmusuario.Show();
+
+        }
     }
 }

@@ -42,5 +42,10 @@ namespace Utilidades
             ds = utilidades.ejecuta(cmd);
             dgv1.DataSource = ds.Tables[0];
         }
+
+        private void txtbuscar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

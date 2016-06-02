@@ -93,6 +93,7 @@
             this.txtbuscar.Size = new System.Drawing.Size(336, 20);
             this.txtbuscar.TabIndex = 6;
             this.txtbuscar.validar = false;
+            this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
             this.txtbuscar.Validating += new System.ComponentModel.CancelEventHandler(this.txtbuscar_Validating);
             // 
             // FrmConsPreguntas

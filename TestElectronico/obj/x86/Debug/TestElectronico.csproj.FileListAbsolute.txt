@@ -9,3 +9,5 @@ C:\Documents and Settings\Administrador\Escritorio\Diplomado C#\TestElectronico\
 C:\Documents and Settings\Administrador\Escritorio\Diplomado C#\TestElectronico\TestElectronico\obj\x86\Debug\TestElectronico.pdb
 C:\Documents and Settings\Administrador\Escritorio\Diplomado C#\TestElectronico\TestElectronico\bin\Debug\TestElectronico.pdb
 C:\Documents and Settings\Administrador\Escritorio\Diplomado C#\TestElectronico\TestElectronico\obj\x86\Debug\TestElectronico.Principal.resources
+C:\Documents and Settings\Administrador\Escritorio\Diplomado C#\TestElectronico\TestElectronico\obj\x86\Debug\TestElectronico.FrmLogin.resources
+C:\Documents and Settings\Administrador\Escritorio\Diplomado C#\TestElectronico\TestElectronico\obj\x86\Debug\TestElectronico.FrmInfoEstudiante.resources
