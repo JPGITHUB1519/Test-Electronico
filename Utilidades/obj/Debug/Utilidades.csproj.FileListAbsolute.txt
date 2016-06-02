@@ -10,3 +10,6 @@ C:\Documents and Settings\Administrador\Escritorio\Diplomado C#\TestElectronico\
 C:\Documents and Settings\Administrador\Escritorio\Diplomado C#\TestElectronico\Utilidades\bin\Debug\Utilidades.dll.config
 C:\Documents and Settings\Administrador\Escritorio\Diplomado C#\TestElectronico\Utilidades\obj\Debug\Utilidades.FrmEstudiante.resources
 C:\Documents and Settings\Administrador\Escritorio\Diplomado C#\TestElectronico\Utilidades\obj\Debug\Utilidades.FrmUsuarioAdministrador.resources
+C:\Documents and Settings\Administrador\Escritorio\Diplomado C#\TestElectronico\Utilidades\obj\Debug\Utilidades.FrmPreguntas.resources
+C:\Documents and Settings\Administrador\Escritorio\Diplomado C#\TestElectronico\Utilidades\obj\Debug\Utilidades.FrmRespuestas.resources
+C:\Documents and Settings\Administrador\Escritorio\Diplomado C#\TestElectronico\Utilidades\obj\Debug\Utilidades.FrmConsPreguntas.resources

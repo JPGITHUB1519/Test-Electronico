@@ -1,6 +1,6 @@
 ﻿namespace Utilidades
 {
-    partial class FrmCarrera
+    partial class FrmRespuestas
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataListado = new System.Windows.Forms.DataGridView();
@@ -42,44 +41,45 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtnombre = new Utilidades.textbox(this.components);
-            this.txtidcarrera = new Utilidades.textbox(this.components);
-            this.btncerrar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.chkiscorrect = new System.Windows.Forms.CheckBox();
+            this.txtidpregunta = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtidrespuesta = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.btncerrar = new System.Windows.Forms.Button();
             this.lblmatricula = new System.Windows.Forms.Label();
             this.btncancelar = new System.Windows.Forms.Button();
             this.btneliminar2 = new System.Windows.Forms.Button();
             this.btnconsultar = new System.Windows.Forms.Button();
             this.btnsalvar = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dgvpreguntas_respuestas = new System.Windows.Forms.DataGridView();
+            this.txtbuscar2 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtrespuesta = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataListado)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvpreguntas_respuestas)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(7, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 29);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Carreras";
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(12, 67);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Location = new System.Drawing.Point(31, 56);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(607, 440);
-            this.tabControl1.TabIndex = 8;
+            this.tabControl1.Size = new System.Drawing.Size(607, 524);
+            this.tabControl1.TabIndex = 14;
             // 
             // tabPage1
             // 
@@ -93,7 +93,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(599, 414);
+            this.tabPage1.Size = new System.Drawing.Size(599, 498);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Listado";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -167,7 +167,7 @@
             this.txtbuscar.Name = "txtbuscar";
             this.txtbuscar.Size = new System.Drawing.Size(100, 20);
             this.txtbuscar.TabIndex = 1;
-            this.txtbuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
+            this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
             // 
             // label2
             // 
@@ -184,17 +184,21 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(599, 414);
+            this.tabPage2.Size = new System.Drawing.Size(599, 498);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mantenimiento";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtnombre);
-            this.groupBox1.Controls.Add(this.txtidcarrera);
-            this.groupBox1.Controls.Add(this.btncerrar);
+            this.groupBox1.Controls.Add(this.txtrespuesta);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.chkiscorrect);
+            this.groupBox1.Controls.Add(this.txtidpregunta);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.txtidrespuesta);
             this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.btncerrar);
             this.groupBox1.Controls.Add(this.lblmatricula);
             this.groupBox1.Controls.Add(this.btncancelar);
             this.groupBox1.Controls.Add(this.btneliminar2);
@@ -202,31 +206,67 @@
             this.groupBox1.Controls.Add(this.btnsalvar);
             this.groupBox1.Location = new System.Drawing.Point(8, 14);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(582, 197);
+            this.groupBox1.Size = new System.Drawing.Size(582, 478);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = " ";
             // 
-            // txtnombre
+            // button1
             // 
-            this.txtnombre.Location = new System.Drawing.Point(110, 72);
-            this.txtnombre.Name = "txtnombre";
-            this.txtnombre.Size = new System.Drawing.Size(129, 20);
-            this.txtnombre.TabIndex = 20;
-            this.txtnombre.validar = true;
+            this.button1.Location = new System.Drawing.Point(402, 48);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(135, 23);
+            this.button1.TabIndex = 27;
+            this.button1.Text = "Consultar Pregunta...";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // txtidcarrera
+            // chkiscorrect
             // 
-            this.txtidcarrera.Location = new System.Drawing.Point(110, 16);
-            this.txtidcarrera.Name = "txtidcarrera";
-            this.txtidcarrera.Size = new System.Drawing.Size(129, 20);
-            this.txtidcarrera.TabIndex = 19;
-            this.txtidcarrera.validar = true;
-            this.txtidcarrera.Validating += new System.ComponentModel.CancelEventHandler(this.txtidcarrera_Validating);
+            this.chkiscorrect.AutoSize = true;
+            this.chkiscorrect.Location = new System.Drawing.Point(163, 112);
+            this.chkiscorrect.Name = "chkiscorrect";
+            this.chkiscorrect.Size = new System.Drawing.Size(85, 17);
+            this.chkiscorrect.TabIndex = 26;
+            this.chkiscorrect.Text = "Es Correcta?";
+            this.chkiscorrect.UseVisualStyleBackColor = true;
+            // 
+            // txtidpregunta
+            // 
+            this.txtidpregunta.Location = new System.Drawing.Point(281, 48);
+            this.txtidpregunta.Name = "txtidpregunta";
+            this.txtidpregunta.Size = new System.Drawing.Size(106, 20);
+            this.txtidpregunta.TabIndex = 25;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(216, 55);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(59, 13);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "IdPregunta";
+            // 
+            // txtidrespuesta
+            // 
+            this.txtidrespuesta.Location = new System.Drawing.Point(79, 52);
+            this.txtidrespuesta.Name = "txtidrespuesta";
+            this.txtidrespuesta.Size = new System.Drawing.Size(106, 20);
+            this.txtidrespuesta.TabIndex = 23;
+            this.txtidrespuesta.Validating += new System.ComponentModel.CancelEventHandler(this.txtidrespuesta_Validating);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(27, 52);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(40, 13);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "Codigo";
             // 
             // btncerrar
             // 
-            this.btncerrar.Location = new System.Drawing.Point(469, 129);
+            this.btncerrar.Location = new System.Drawing.Point(478, 430);
             this.btncerrar.Name = "btncerrar";
             this.btncerrar.Size = new System.Drawing.Size(106, 23);
             this.btncerrar.TabIndex = 18;
@@ -234,27 +274,18 @@
             this.btncerrar.UseVisualStyleBackColor = true;
             this.btncerrar.Click += new System.EventHandler(this.btncerrar_Click);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(36, 75);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 13);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "Nombre";
-            // 
             // lblmatricula
             // 
             this.lblmatricula.AutoSize = true;
-            this.lblmatricula.Location = new System.Drawing.Point(36, 16);
+            this.lblmatricula.Location = new System.Drawing.Point(27, 149);
             this.lblmatricula.Name = "lblmatricula";
-            this.lblmatricula.Size = new System.Drawing.Size(40, 13);
+            this.lblmatricula.Size = new System.Drawing.Size(58, 13);
             this.lblmatricula.TabIndex = 12;
-            this.lblmatricula.Text = "Código";
+            this.lblmatricula.Text = "Respuesta";
             // 
             // btncancelar
             // 
-            this.btncancelar.Location = new System.Drawing.Point(357, 129);
+            this.btncancelar.Location = new System.Drawing.Point(366, 430);
             this.btncancelar.Name = "btncancelar";
             this.btncancelar.Size = new System.Drawing.Size(106, 23);
             this.btncancelar.TabIndex = 9;
@@ -264,7 +295,7 @@
             // 
             // btneliminar2
             // 
-            this.btneliminar2.Location = new System.Drawing.Point(245, 129);
+            this.btneliminar2.Location = new System.Drawing.Point(254, 430);
             this.btneliminar2.Name = "btneliminar2";
             this.btneliminar2.Size = new System.Drawing.Size(106, 23);
             this.btneliminar2.TabIndex = 8;
@@ -274,7 +305,7 @@
             // 
             // btnconsultar
             // 
-            this.btnconsultar.Location = new System.Drawing.Point(133, 129);
+            this.btnconsultar.Location = new System.Drawing.Point(142, 430);
             this.btnconsultar.Name = "btnconsultar";
             this.btnconsultar.Size = new System.Drawing.Size(106, 23);
             this.btnconsultar.TabIndex = 7;
@@ -284,29 +315,85 @@
             // 
             // btnsalvar
             // 
-            this.btnsalvar.Location = new System.Drawing.Point(21, 129);
+            this.btnsalvar.Location = new System.Drawing.Point(30, 430);
             this.btnsalvar.Name = "btnsalvar";
             this.btnsalvar.Size = new System.Drawing.Size(106, 23);
             this.btnsalvar.TabIndex = 6;
             this.btnsalvar.Text = "&Salvar";
             this.btnsalvar.UseVisualStyleBackColor = true;
-            this.btnsalvar.Click += new System.EventHandler(this.btnNuevo_Click);
+            this.btnsalvar.Click += new System.EventHandler(this.btnsalvar_Click);
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // FrmCarrera
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(33, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(150, 29);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Respuestas";
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.txtbuscar2);
+            this.tabPage3.Controls.Add(this.label5);
+            this.tabPage3.Controls.Add(this.dgvpreguntas_respuestas);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(599, 498);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Preguntas - Respuestas";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // dgvpreguntas_respuestas
+            // 
+            this.dgvpreguntas_respuestas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvpreguntas_respuestas.Location = new System.Drawing.Point(29, 92);
+            this.dgvpreguntas_respuestas.Name = "dgvpreguntas_respuestas";
+            this.dgvpreguntas_respuestas.Size = new System.Drawing.Size(510, 283);
+            this.dgvpreguntas_respuestas.TabIndex = 0;
+            // 
+            // txtbuscar2
+            // 
+            this.txtbuscar2.Location = new System.Drawing.Point(139, 26);
+            this.txtbuscar2.Name = "txtbuscar2";
+            this.txtbuscar2.Size = new System.Drawing.Size(100, 20);
+            this.txtbuscar2.TabIndex = 3;
+            this.txtbuscar2.TextChanged += new System.EventHandler(this.txtbuscar2_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(60, 33);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(50, 13);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Pregunta";
+            // 
+            // txtrespuesta
+            // 
+            this.txtrespuesta.Location = new System.Drawing.Point(30, 185);
+            this.txtrespuesta.Multiline = true;
+            this.txtrespuesta.Name = "txtrespuesta";
+            this.txtrespuesta.Size = new System.Drawing.Size(387, 174);
+            this.txtrespuesta.TabIndex = 28;
+            // 
+            // FrmRespuestas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(690, 537);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(650, 592);
             this.Controls.Add(this.tabControl1);
-            this.Name = "FrmCarrera";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmCarrera";
-            this.Load += new System.EventHandler(this.FrmCarrera_Load);
+            this.Controls.Add(this.label1);
+            this.Name = "FrmRespuestas";
+            this.Text = "FrmRespuestas";
+            this.Load += new System.EventHandler(this.FrmRespuestas_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -315,6 +402,9 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvpreguntas_respuestas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -322,7 +412,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.DataGridView dataListado;
@@ -335,15 +424,24 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btncerrar;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox chkiscorrect;
+        private System.Windows.Forms.TextBox txtidpregunta;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtidrespuesta;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btncerrar;
         private System.Windows.Forms.Label lblmatricula;
         private System.Windows.Forms.Button btncancelar;
         private System.Windows.Forms.Button btneliminar2;
         private System.Windows.Forms.Button btnconsultar;
         private System.Windows.Forms.Button btnsalvar;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private textbox txtnombre;
-        private textbox txtidcarrera;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TextBox txtbuscar2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridView dgvpreguntas_respuestas;
+        private System.Windows.Forms.TextBox txtrespuesta;
     }
 }

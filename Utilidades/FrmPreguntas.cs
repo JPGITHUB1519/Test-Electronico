@@ -6,45 +6,32 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using Utilidades;
 
 namespace Utilidades
 {
-    public partial class FrmCarrera : Form
+    public partial class FrmPreguntas : Form
     {
-        public FrmCarrera()
+        public FrmPreguntas()
         {
             InitializeComponent();
         }
 
         public void nuevo()
         {
-            txtidcarrera.Text = string.Empty;
-            txtnombre.Text = string.Empty;
+            txtidpregunta.Text = string.Empty;
+            txtvalor.Text = string.Empty;
+            txtpregunta.Text = string.Empty;
         }
 
         private void mostrar()
         {
             DataSet ds;
 
-            string cmd = "EXEC spmostrar_carrera";
+            string cmd = "EXEC spmostrar_preguntas";
             ds = utilidades.ejecuta(cmd);
             this.dataListado.DataSource = ds.Tables[0];
 
             lblTotal.Text = "Total de Registros : " + Convert.ToString(dataListado.Rows.Count);
-        }
-
-        private void eliminar()
-        {
-            DataSet ds = new DataSet();
-
-            string cmd = string.Format("EXEC speliminar_carrera '{0}'", txtidcarrera.Text.Trim());
-
-            ds = utilidades.ejecuta(cmd);
-
-            this.nuevo();
-            this.mostrar();
-            this.txtidcarrera.Focus();
         }
 
         private void salvar()
@@ -55,7 +42,7 @@ namespace Utilidades
             }
 
 
-            string cmd = string.Format("EXEC SPACTCARRERA '{0}','{1}'", txtidcarrera.Text.Trim(), txtnombre.Text.Trim());
+            string cmd = string.Format("EXEC SPACTPREGUNTAS '{0}','{1}','{2}'", Convert.ToInt32(txtidpregunta.Text.Trim()), txtpregunta.Text.Trim().ToUpper(), Convert.ToInt32(txtvalor.Text.Trim()));
 
 
             DataSet ds = utilidades.ejecuta(cmd);
@@ -70,57 +57,85 @@ namespace Utilidades
 
             this.mostrar();
             this.nuevo();
-            this.txtidcarrera.Focus();
+            this.txtidpregunta.Focus();
+        }
+
+        private void eliminar()
+        {
+            DataSet ds = new DataSet();
+
+            string cmd = string.Format("EXEC speliminar_preguntas '{0}'", txtidpregunta.Text.Trim());
+
+            ds = utilidades.ejecuta(cmd);
+
+            this.nuevo();
+            this.mostrar();
+            this.txtidpregunta.Focus();
         }
 
         private void buscar_nombre()
         {
             DataSet ds;
 
-            string cmd = string.Format("EXEC spbuscar_carrera_nombre '{0}'", txtbuscar.Text.Trim());
+            string cmd = string.Format("EXEC spbuscar_preguntas_nombre '{0}'", txtbuscar.Text.Trim());
             ds = utilidades.ejecuta(cmd);
             this.dataListado.DataSource = ds.Tables[0];
             utilidades.ocultarcolumnas(dataListado);
             lblTotal.Text = "Total de Registros : " + Convert.ToString(dataListado.Rows.Count);
         }
 
-        private void btnNuevo_Click(object sender, EventArgs e)
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
-            this.salvar();
-           
+
+        }
+
+        private void btnsalvar_Click(object sender, EventArgs e)
+        {
+            salvar();
         }
 
         private void btneliminar2_Click(object sender, EventArgs e)
         {
-            this.eliminar();
-            
-        }
-
-        private void btnconsultar_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedIndex = 0;
+            eliminar();
         }
 
         private void btncancelar_Click(object sender, EventArgs e)
         {
+            this.txtidpregunta.Focus();
             nuevo();
-            this.txtidcarrera.Focus();
         }
 
         private void btncerrar_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Close();
         }
 
-        private void FrmCarrera_Load(object sender, EventArgs e)
+        private void btnconsultar_Click(object sender, EventArgs e)
+        {
+            this.tabControl1.SelectedIndex = 0;
+        }
+
+        private void FrmPreguntas_Load(object sender, EventArgs e)
         {
             utilidades.ocultarcolumnas(dataListado);
+
+
             this.mostrar();
         }
 
-        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        private void txtbuscar_TextChanged(object sender, EventArgs e)
         {
             this.buscar_nombre();
+        }
+
+        private void dataListado_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dataListado.Columns["eliminar"].Index)
+            {
+                DataGridViewCheckBoxCell chkeliminar = (DataGridViewCheckBoxCell)dataListado.Rows[e.RowIndex].Cells["Eliminar"];
+                chkeliminar.Value = !Convert.ToBoolean(chkeliminar.Value);
+            }
         }
 
         private void chkeliminar_CheckedChanged(object sender, EventArgs e)
@@ -135,25 +150,18 @@ namespace Utilidades
             }
         }
 
-        private void dataListado_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.ColumnIndex == dataListado.Columns["eliminar"].Index)
-            {
-                DataGridViewCheckBoxCell chkeliminar = (DataGridViewCheckBoxCell)dataListado.Rows[e.RowIndex].Cells["Eliminar"];
-                chkeliminar.Value = !Convert.ToBoolean(chkeliminar.Value);
-            }
-        }
-
         private void dataListado_DoubleClick(object sender, EventArgs e)
         {
             // al dar doble click en la celda se llenara en la cajas de texto
 
-            this.txtidcarrera.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["idcarrera"].Value);
-            this.txtnombre.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["nombre_carrera"].Value);
+            this.txtidpregunta.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["idpregunta"].Value);
+            this.txtpregunta.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["pregunta"].Value);
+            this.txtvalor.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["valor"].Value);
+
             // cambiar al otro tabpage
 
             this.tabControl1.SelectedIndex = 1;
-            this.txtidcarrera.Focus();
+            this.txtidpregunta.Focus();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -178,7 +186,7 @@ namespace Utilidades
                             if (Convert.ToBoolean(row.Cells[0].Value))
                             {
                                 codigo = Convert.ToString(row.Cells[1].Value);
-                                cmd = string.Format("EXEC speliminar_carrera '{0}'", codigo);
+                                cmd = string.Format("EXEC SPELIMINAR_preguntas '{0}'", codigo);
 
                                 ds = utilidades.ejecuta(cmd);
 
@@ -216,30 +224,32 @@ namespace Utilidades
             {
                 utilidades.mensajeerror("Debe Seleccionar los Registros a Eliminar");
             }
-            
         }
 
-        private void txtidcarrera_Validating(object sender, CancelEventArgs e)
+        private void txtidpregunta_Validating(object sender, CancelEventArgs e)
         {
-            if (string.IsNullOrEmpty(txtidcarrera.Text.Trim()))
+            if (string.IsNullOrEmpty(txtidpregunta.Text.Trim()))
 
                 return;
-            string cmd = string.Format("select * from carrera where idcarrera = '{0}'", txtidcarrera.Text.Trim());
+            string cmd = string.Format("select * from preguntas where idpregunta = '{0}'", txtidpregunta.Text.Trim());
 
             DataSet ds = utilidades.ejecuta(cmd);
 
             if (ds.Tables[0].Rows.Count > 0)
             {
-                txtidcarrera.Text = ds.Tables[0].Rows[0]["idcarrera"].ToString();
-                txtnombre.Text = ds.Tables[0].Rows[0]["nombre_carrera"].ToString();
-
+                txtidpregunta.Text = ds.Tables[0].Rows[0]["idpregunta"].ToString();
+                txtpregunta.Text = ds.Tables[0].Rows[0]["pregunta"].ToString();
+                txtvalor.Text = ds.Tables[0].Rows[0]["valor"].ToString();
             }
             else
             {
-               
-                txtnombre.Text = string.Empty;
- 
+
+                txtpregunta.Text = string.Empty;
+                txtvalor.Text = string.Empty;
+
             }
         }
     }
+
+
 }

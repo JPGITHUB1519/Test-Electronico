@@ -51,6 +51,12 @@
     <Compile Include="FrmCarrera.Designer.cs">
       <DependentUpon>FrmCarrera.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmConsPreguntas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsPreguntas.Designer.cs">
+      <DependentUpon>FrmConsPreguntas.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmEstudiante.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,18 @@
     </Compile>
     <Compile Include="FrmManteBase.Designer.cs">
       <DependentUpon>FrmManteBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPreguntas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPreguntas.Designer.cs">
+      <DependentUpon>FrmPreguntas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRespuestas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRespuestas.Designer.cs">
+      <DependentUpon>FrmRespuestas.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmUsuarioAdministrador.cs">
       <SubType>Form</SubType>
@@ -87,11 +105,20 @@
     <EmbeddedResource Include="FrmCarrera.resx">
       <DependentUpon>FrmCarrera.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsPreguntas.resx">
+      <DependentUpon>FrmConsPreguntas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmEstudiante.resx">
       <DependentUpon>FrmEstudiante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmManteBase.resx">
       <DependentUpon>FrmManteBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPreguntas.resx">
+      <DependentUpon>FrmPreguntas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRespuestas.resx">
+      <DependentUpon>FrmRespuestas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUsuarioAdministrador.resx">
       <DependentUpon>FrmUsuarioAdministrador.cs</DependentUpon>
