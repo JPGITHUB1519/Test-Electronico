@@ -181,9 +181,9 @@
             this.lblresp.AutoSize = true;
             this.lblresp.Location = new System.Drawing.Point(664, 21);
             this.lblresp.Name = "lblresp";
-            this.lblresp.Size = new System.Drawing.Size(70, 13);
+            this.lblresp.Size = new System.Drawing.Size(58, 13);
             this.lblresp.TabIndex = 26;
-            this.lblresp.Text = "Calificacion : ";
+            this.lblresp.Text = "Respuesta";
             // 
             // FrmExamen
             // 

@@ -219,6 +219,40 @@ namespace Utilidades
             return aux;
         }
 
+        public static char calificacion_letra(int calificacion)
+        {
+            char equivalencia = 'N';
+
+            if(calificacion >= 90 && calificacion <= 100)
+            {
+                equivalencia = 'A';
+            }
+            else if(calificacion >= 80 && calificacion <= 89)
+            {
+                equivalencia = 'B';
+
+            }
+            else if (calificacion >= 70 && calificacion <= 79)
+            {
+                equivalencia = 'C';
+
+            }
+            else if (calificacion >= 60 && calificacion <= 69)
+            {
+                equivalencia = 'D';
+
+            }
+            else if (calificacion <= 59)
+            {
+                equivalencia = 'F';
+
+            }
+
+            return equivalencia;
+                
+            
+        }
+
        
 
     }

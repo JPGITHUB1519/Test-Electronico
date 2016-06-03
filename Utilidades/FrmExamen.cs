@@ -11,6 +11,7 @@ namespace Utilidades
 {
     public partial class FrmExamen : Form
     {
+        public string matricula;
         public List<int> preguntas = new List<int> ();
         public List<int> respuestas = new List<int>();
         public List<string> respuestas_correcta = new List<string>();
@@ -20,7 +21,9 @@ namespace Utilidades
         public DataSet ds_respuestas;
         public DataSet ds_respuestas_correctas;
         public int calificacion;
-        
+        public char calificacion_letra;
+
+
 
         public void make_respuestas()
         {
@@ -58,9 +61,10 @@ namespace Utilidades
             this.lblpregunta.Text = ds.Tables[0].Rows[0]["pregunta"].ToString();
 
         }
-        public FrmExamen()
+        public FrmExamen(string ch_matricula)
         {
             InitializeComponent();
+            this.matricula = ch_matricula;
             this.calificacion = 0;
             this.preguntas = utilidades.generar_preguntas();
             lblprueba.Text = "";
@@ -143,13 +147,44 @@ namespace Utilidades
             }
             else
             {
-                MessageBox.Show("Termino");
+   
+                // guardar examen en la base de datos
+
+                
+                DataSet ds = new DataSet();
+                this.calificacion_letra = utilidades.calificacion_letra(this.calificacion);
+                string cmd = string.Format("exec SPACTEXAMEN '{0}', '{1}', '{2}'", this.matricula, this.calificacion, this.calificacion_letra);
+                ds = utilidades.ejecuta(cmd);
+                
+                MessageBox.Show("El examen ha Termininado");
+                // generar reporte
+
+
+                cmd = string.Format("EXEC sptodos_datos_examen {0}", this.matricula);
+                ds = utilidades.ejecuta(cmd);
+
+                FrmReportes frmreporte = new FrmReportes(ds, "Utilidades.ReporteExamen.rdlc");
+                frmreporte.Show();
+ 
+
+
+                this.Hide();
+                frmreporte.Show();
+
+
+
             }
         }
 
         private void FrmExamen_Load(object sender, EventArgs e)
         {
+            
 
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -75,6 +75,7 @@
             this.estudiantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.preguntasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.respuestasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosAdminsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.newToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.openToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -87,7 +88,8 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.usuariosAdminsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteGenralToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -102,7 +104,8 @@
             this.toolsMenu,
             this.windowsMenu,
             this.helpMenu,
-            this.mantenimientosToolStripMenuItem});
+            this.mantenimientosToolStripMenuItem,
+            this.reportarToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.MdiWindowListItem = this.windowsMenu;
             this.menuStrip.Name = "menuStrip";
@@ -474,6 +477,13 @@
             this.respuestasToolStripMenuItem.Text = "Respuestas";
             this.respuestasToolStripMenuItem.Click += new System.EventHandler(this.respuestasToolStripMenuItem_Click);
             // 
+            // usuariosAdminsToolStripMenuItem
+            // 
+            this.usuariosAdminsToolStripMenuItem.Name = "usuariosAdminsToolStripMenuItem";
+            this.usuariosAdminsToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.usuariosAdminsToolStripMenuItem.Text = "Usuarios Admins";
+            this.usuariosAdminsToolStripMenuItem.Click += new System.EventHandler(this.usuariosAdminsToolStripMenuItem_Click);
+            // 
             // toolStrip
             // 
             this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -573,12 +583,20 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(40, 17);
             this.toolStripStatusLabel.Text = "Estado";
             // 
-            // usuariosAdminsToolStripMenuItem
+            // reportarToolStripMenuItem
             // 
-            this.usuariosAdminsToolStripMenuItem.Name = "usuariosAdminsToolStripMenuItem";
-            this.usuariosAdminsToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
-            this.usuariosAdminsToolStripMenuItem.Text = "Usuarios Admins";
-            this.usuariosAdminsToolStripMenuItem.Click += new System.EventHandler(this.usuariosAdminsToolStripMenuItem_Click);
+            this.reportarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.reporteGenralToolStripMenuItem});
+            this.reportarToolStripMenuItem.Name = "reportarToolStripMenuItem";
+            this.reportarToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.reportarToolStripMenuItem.Text = "Reportar";
+            // 
+            // reporteGenralToolStripMenuItem
+            // 
+            this.reporteGenralToolStripMenuItem.Name = "reporteGenralToolStripMenuItem";
+            this.reporteGenralToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.reporteGenralToolStripMenuItem.Text = "Reporte General";
+            this.reporteGenralToolStripMenuItem.Click += new System.EventHandler(this.reporteGenralToolStripMenuItem_Click);
             // 
             // Principal
             // 
@@ -665,6 +683,8 @@
         private System.Windows.Forms.ToolStripMenuItem preguntasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem respuestasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuariosAdminsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reporteGenralToolStripMenuItem;
     }
 }
 

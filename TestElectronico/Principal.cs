@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Utilidades;
 
 namespace TestElectronico
 {
@@ -142,6 +143,17 @@ namespace TestElectronico
             frmusuario.MdiParent = this;
             frmusuario.Show();
 
+        }
+
+        private void reporteGenralToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // generar reporte
+            DataSet ds = new DataSet();
+            string cmd = string.Format("exec spcontar_calificaciones");
+            ds = utilidades.ejecuta(cmd);
+
+            FrmReportes frmreporte = new FrmReportes(ds, "Utilidades.Reporte_General.rdlc");
+            frmreporte.Show();
         }
     }
 }

@@ -14,3 +14,6 @@ C:\Documents and Settings\Administrador\Escritorio\Diplomado C#\TestElectronico\
 C:\Documents and Settings\Administrador\Escritorio\Diplomado C#\TestElectronico\Utilidades\obj\Debug\Utilidades.FrmRespuestas.resources
 C:\Documents and Settings\Administrador\Escritorio\Diplomado C#\TestElectronico\Utilidades\obj\Debug\Utilidades.FrmConsPreguntas.resources
 C:\Documents and Settings\Administrador\Escritorio\Diplomado C#\TestElectronico\Utilidades\obj\Debug\Utilidades.FrmExamen.resources
+C:\Documents and Settings\Administrador\Escritorio\Diplomado C#\TestElectronico\Utilidades\obj\Debug\RdlCompile.cache
+C:\Documents and Settings\Administrador\Escritorio\Diplomado C#\TestElectronico\Utilidades\obj\Debug\RdlCompile.compiled
+C:\Documents and Settings\Administrador\Escritorio\Diplomado C#\TestElectronico\Utilidades\obj\Debug\Utilidades.FrmReportes.resources
