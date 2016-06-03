@@ -40,6 +40,8 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.lblprueba = new System.Windows.Forms.Label();
+            this.lblcalificacion = new System.Windows.Forms.Label();
+            this.lblresp = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -165,11 +167,31 @@
             this.lblprueba.TabIndex = 24;
             this.lblprueba.Text = "lblprueba";
             // 
+            // lblcalificacion
+            // 
+            this.lblcalificacion.AutoSize = true;
+            this.lblcalificacion.Location = new System.Drawing.Point(514, 21);
+            this.lblcalificacion.Name = "lblcalificacion";
+            this.lblcalificacion.Size = new System.Drawing.Size(70, 13);
+            this.lblcalificacion.TabIndex = 25;
+            this.lblcalificacion.Text = "Calificacion : ";
+            // 
+            // lblresp
+            // 
+            this.lblresp.AutoSize = true;
+            this.lblresp.Location = new System.Drawing.Point(664, 21);
+            this.lblresp.Name = "lblresp";
+            this.lblresp.Size = new System.Drawing.Size(70, 13);
+            this.lblresp.TabIndex = 26;
+            this.lblresp.Text = "Calificacion : ";
+            // 
             // FrmExamen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(809, 718);
+            this.Controls.Add(this.lblresp);
+            this.Controls.Add(this.lblcalificacion);
             this.Controls.Add(this.lblprueba);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -200,5 +222,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblprueba;
+        private System.Windows.Forms.Label lblcalificacion;
+        private System.Windows.Forms.Label lblresp;
     }
 }
