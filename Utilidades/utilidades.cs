@@ -128,6 +128,97 @@ namespace Utilidades
             return cond;
         }
 
+        public static int numero_aleatorios(int min, int max)
+        {
+           
+            // random next(min, max -1)
+            Random r = new Random();
+
+            int num = r.Next(min, max + 1);
+
+            return num;
+        }
+
+        public static List<int> generar_preguntas()
+        {
+            /* retorna una lista con el indice de las preguntas aleatorias"*/
+
+            List<int> preguntas = new List<int>();
+
+            DataSet ds = new DataSet();
+            string cmd = "select * from preguntas";
+            ds = ejecuta(cmd);
+            int max = ds.Tables[0].Rows.Count;
+
+
+            int cont = 0;
+            //int cant_preguntas = 5;
+            int cant_preguntas = 3;
+            int n;
+
+            while (cont < cant_preguntas)
+            {
+                n = numero_aleatorios(1, max);
+
+                // si no existe agregalo
+                if (preguntas.IndexOf(n) == -1)
+                {
+                    preguntas.Add(n);
+                    cont = cont + 1;
+
+                }
+                else
+                {
+                    continue;
+
+                }
+
+            }
+            return preguntas;
+
+        }
+
+        public static List<int> generar_respuestas(int max)
+        {
+            /* retorna una lista con el indice de las respuestas aleatorias"*/
+            List<int>respuestas = new List<int>();
+            int cont = 0;
+            int cant_preguntas = 4;
+            int n;
+
+            while (cont < cant_preguntas)
+            {
+                n = numero_aleatorios(0, max - 1);
+
+                // si no existe agregalo
+                if (respuestas.IndexOf(n) == -1)
+                {
+                    respuestas.Add(n);
+                    cont = cont + 1;
+
+                }
+                else
+                {
+                    continue;
+
+                }
+
+            }
+            return respuestas;
+
+        }
+
+
+        // list like a quue
+        public static int pop(List<int> preguntas)
+        {
+            int tam = preguntas.Count;
+            int aux = preguntas[tam - 1];
+            preguntas.RemoveAt(tam - 1);
+
+            return aux;
+        }
+
        
 
     }
