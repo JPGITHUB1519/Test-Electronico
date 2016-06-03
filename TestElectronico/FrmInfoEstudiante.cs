@@ -40,6 +40,7 @@ namespace TestElectronico
         private void button1_Click(object sender, EventArgs e)
         {
             Utilidades.FrmExamen frmex = new Utilidades.FrmExamen(txtmatricula.Text.Trim());
+            
             this.Hide();
             frmex.Show();
 

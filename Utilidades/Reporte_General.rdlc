@@ -46,6 +46,16 @@
                   <GroupExpression>=Fields!calificacion_letra.Value</GroupExpression>
                 </GroupExpressions>
               </Group>
+              <ChartMembers>
+                <ChartMember>
+                  <Group Name="Chart2_CategoryGroup2">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!cantidad.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <Label>=Fields!cantidad.Value</Label>
+                </ChartMember>
+              </ChartMembers>
               <Label>=Fields!calificacion_letra.Value</Label>
             </ChartMember>
           </ChartMembers>
@@ -286,7 +296,7 @@
         <DataSetName>DataSet1</DataSetName>
         <Top>1.73778cm</Top>
         <Left>4.51591cm</Left>
-        <Height>16.24479cm</Height>
+        <Height>16.00667cm</Height>
         <Width>17.87167cm</Width>
         <Style>
           <Border>

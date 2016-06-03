@@ -304,7 +304,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tabControl1);
             this.Name = "FrmCarrera";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmCarrera";
             this.Load += new System.EventHandler(this.FrmCarrera_Load);
             this.tabControl1.ResumeLayout(false);

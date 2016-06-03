@@ -66,7 +66,8 @@ namespace TestElectronico
                 if (Convert.ToBoolean(ds.Tables[0].Rows[0]["tomo_examen"]) == false)
                 {
                     doform.Show();
-                    
+                    cmd = string.Format("exec sptomar_examen '{0}'", this.txtmatricula.Text.Trim());
+                    ds = utilidades.ejecuta(cmd);
 
                 }
                 else

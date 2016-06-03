@@ -48,12 +48,12 @@
             this.btnconsultar = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbidcarrera = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtmatricula = new Utilidades.textbox(this.components);
             this.btnsalvar = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cbidcarrera = new System.Windows.Forms.ComboBox();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataListado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -260,6 +260,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = " ";
             // 
+            // cbidcarrera
+            // 
+            this.cbidcarrera.FormattingEnabled = true;
+            this.cbidcarrera.Location = new System.Drawing.Point(110, 134);
+            this.cbidcarrera.Name = "cbidcarrera";
+            this.cbidcarrera.Size = new System.Drawing.Size(121, 21);
+            this.cbidcarrera.TabIndex = 22;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(23, 137);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(66, 13);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "Cod. Carrera";
+            // 
             // txtmatricula
             // 
             this.txtmatricula.Location = new System.Drawing.Point(110, 16);
@@ -302,23 +319,6 @@
             this.tabControl1.Size = new System.Drawing.Size(607, 440);
             this.tabControl1.TabIndex = 10;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(23, 137);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 13);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "Cod. Carrera";
-            // 
-            // cbidcarrera
-            // 
-            this.cbidcarrera.FormattingEnabled = true;
-            this.cbidcarrera.Location = new System.Drawing.Point(110, 134);
-            this.cbidcarrera.Name = "cbidcarrera";
-            this.cbidcarrera.Size = new System.Drawing.Size(121, 21);
-            this.cbidcarrera.TabIndex = 22;
-            // 
             // FrmEstudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -327,6 +327,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tabControl1);
             this.Name = "FrmEstudiante";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmEstudiante";
             this.Load += new System.EventHandler(this.FrmEstudiante_Load);
             this.tabPage1.ResumeLayout(false);

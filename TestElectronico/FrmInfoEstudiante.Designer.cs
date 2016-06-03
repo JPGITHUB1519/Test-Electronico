@@ -143,6 +143,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
             this.Name = "FrmInfoEstudiante";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmInfoEstudiante";
             this.Load += new System.EventHandler(this.FrmInfoEstudiante_Load);
             this.ResumeLayout(false);

@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmExamen));
             this.label1 = new System.Windows.Forms.Label();
             this.lblpregunta = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblnumpregunta = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rbresp4 = new System.Windows.Forms.RadioButton();
             this.rbresp3 = new System.Windows.Forms.RadioButton();
@@ -39,9 +39,6 @@
             this.rbresp1 = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.lblprueba = new System.Windows.Forms.Label();
-            this.lblcalificacion = new System.Windows.Forms.Label();
-            this.lblresp = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -62,19 +59,19 @@
             this.lblpregunta.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblpregunta.Location = new System.Drawing.Point(12, 93);
             this.lblpregunta.Name = "lblpregunta";
-            this.lblpregunta.Size = new System.Drawing.Size(735, 187);
+            this.lblpregunta.Size = new System.Drawing.Size(735, 132);
             this.lblpregunta.TabIndex = 20;
             this.lblpregunta.Text = resources.GetString("lblpregunta.Text");
             // 
-            // label3
+            // lblnumpregunta
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 57);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 20);
-            this.label3.TabIndex = 21;
-            this.label3.Text = "Pregunta #";
+            this.lblnumpregunta.AutoSize = true;
+            this.lblnumpregunta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnumpregunta.Location = new System.Drawing.Point(12, 57);
+            this.lblnumpregunta.Name = "lblnumpregunta";
+            this.lblnumpregunta.Size = new System.Drawing.Size(97, 20);
+            this.lblnumpregunta.TabIndex = 21;
+            this.lblnumpregunta.Text = "Pregunta #";
             // 
             // groupBox1
             // 
@@ -82,12 +79,13 @@
             this.groupBox1.Controls.Add(this.rbresp3);
             this.groupBox1.Controls.Add(this.rbresp2);
             this.groupBox1.Controls.Add(this.rbresp1);
-            this.groupBox1.Location = new System.Drawing.Point(31, 283);
+            this.groupBox1.Location = new System.Drawing.Point(16, 228);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(608, 243);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Respuestas";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // rbresp4
             // 
@@ -141,7 +139,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Location = new System.Drawing.Point(105, 557);
+            this.groupBox2.Location = new System.Drawing.Point(70, 486);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(392, 108);
             this.groupBox2.TabIndex = 23;
@@ -150,55 +148,28 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(144, 37);
+            this.button1.Image = global::Utilidades.Properties.Resources.next;
+            this.button1.Location = new System.Drawing.Point(147, 28);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 43);
+            this.button1.Size = new System.Drawing.Size(104, 74);
             this.button1.TabIndex = 0;
             this.button1.Text = "Siguiente";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // lblprueba
-            // 
-            this.lblprueba.AutoSize = true;
-            this.lblprueba.Location = new System.Drawing.Point(65, 25);
-            this.lblprueba.Name = "lblprueba";
-            this.lblprueba.Size = new System.Drawing.Size(50, 13);
-            this.lblprueba.TabIndex = 24;
-            this.lblprueba.Text = "lblprueba";
-            // 
-            // lblcalificacion
-            // 
-            this.lblcalificacion.AutoSize = true;
-            this.lblcalificacion.Location = new System.Drawing.Point(514, 21);
-            this.lblcalificacion.Name = "lblcalificacion";
-            this.lblcalificacion.Size = new System.Drawing.Size(70, 13);
-            this.lblcalificacion.TabIndex = 25;
-            this.lblcalificacion.Text = "Calificacion : ";
-            // 
-            // lblresp
-            // 
-            this.lblresp.AutoSize = true;
-            this.lblresp.Location = new System.Drawing.Point(664, 21);
-            this.lblresp.Name = "lblresp";
-            this.lblresp.Size = new System.Drawing.Size(58, 13);
-            this.lblresp.TabIndex = 26;
-            this.lblresp.Text = "Respuesta";
             // 
             // FrmExamen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(809, 718);
-            this.Controls.Add(this.lblresp);
-            this.Controls.Add(this.lblcalificacion);
-            this.Controls.Add(this.lblprueba);
+            this.ClientSize = new System.Drawing.Size(759, 603);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblnumpregunta);
             this.Controls.Add(this.lblpregunta);
             this.Controls.Add(this.label1);
             this.Name = "FrmExamen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmExamen";
             this.Load += new System.EventHandler(this.FrmExamen_Load);
             this.groupBox1.ResumeLayout(false);
@@ -213,7 +184,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblpregunta;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblnumpregunta;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton rbresp4;
         private System.Windows.Forms.RadioButton rbresp3;
@@ -221,8 +192,5 @@
         private System.Windows.Forms.RadioButton rbresp1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label lblprueba;
-        private System.Windows.Forms.Label lblcalificacion;
-        private System.Windows.Forms.Label lblresp;
     }
 }

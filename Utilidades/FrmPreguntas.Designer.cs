@@ -41,6 +41,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtpregunta = new System.Windows.Forms.TextBox();
             this.txtvalor = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtidpregunta = new System.Windows.Forms.TextBox();
@@ -53,7 +54,6 @@
             this.btnsalvar = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.txtpregunta = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataListado)).BeginInit();
@@ -201,6 +201,14 @@
             this.groupBox1.Text = " ";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // txtpregunta
+            // 
+            this.txtpregunta.Location = new System.Drawing.Point(30, 143);
+            this.txtpregunta.Multiline = true;
+            this.txtpregunta.Name = "txtpregunta";
+            this.txtpregunta.Size = new System.Drawing.Size(387, 174);
+            this.txtpregunta.TabIndex = 29;
+            // 
             // txtvalor
             // 
             this.txtvalor.Location = new System.Drawing.Point(275, 52);
@@ -308,14 +316,6 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Preguntas";
             // 
-            // txtpregunta
-            // 
-            this.txtpregunta.Location = new System.Drawing.Point(30, 143);
-            this.txtpregunta.Multiline = true;
-            this.txtpregunta.Name = "txtpregunta";
-            this.txtpregunta.Size = new System.Drawing.Size(387, 174);
-            this.txtpregunta.TabIndex = 29;
-            // 
             // FrmPreguntas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -324,7 +324,7 @@
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);
             this.Name = "FrmPreguntas";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmPreguntas";
             this.Load += new System.EventHandler(this.FrmPreguntas_Load);
             this.tabControl1.ResumeLayout(false);

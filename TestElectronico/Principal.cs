@@ -106,54 +106,38 @@ namespace TestElectronico
 
         private void carrerasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Utilidades.FrmCarrera frmcarrera= new Utilidades.FrmCarrera();
-
-            frmcarrera.MdiParent = this;
-            frmcarrera.Show();
+            FrmCarrera frmcar = new FrmCarrera();
+            frmcar.MdiParent = this;
+            frmcar.Show();
+            
         }
 
         private void estudiantesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Utilidades.FrmEstudiante frmestudiante = new Utilidades.FrmEstudiante();
-
-            frmestudiante.MdiParent = this;
-            frmestudiante.Show();
+            FrmEstudiante frmestu = new FrmEstudiante();
+            frmestu.MdiParent = this;
+            frmestu.Show();
         }
 
         private void preguntasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Utilidades.FrmPreguntas frmpreguntas = new Utilidades.FrmPreguntas();
-
-            frmpreguntas.MdiParent = this;
-            frmpreguntas.Show();
+            FrmPreguntas frmpreg = new FrmPreguntas();
+            frmpreg.MdiParent = this;
+            frmpreg.Show();
         }
 
         private void respuestasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Utilidades.FrmRespuestas frmrespuestas = new Utilidades.FrmRespuestas();
-
-            frmrespuestas.MdiParent = this;
-            frmrespuestas.Show();
+            FrmRespuestas frmresp = new FrmRespuestas();
+            frmresp.MdiParent = this;
+            frmresp.Show();
         }
 
-        private void usuariosAdminsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void usuariosAdministradoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Utilidades.FrmUsuarioAdministrador frmusuario = new Utilidades.FrmUsuarioAdministrador();
-
-            frmusuario.MdiParent = this;
-            frmusuario.Show();
-
-        }
-
-        private void reporteGenralToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            // generar reporte
-            DataSet ds = new DataSet();
-            string cmd = string.Format("exec spcontar_calificaciones");
-            ds = utilidades.ejecuta(cmd);
-
-            FrmReportes frmreporte = new FrmReportes(ds, "Utilidades.Reporte_General.rdlc");
-            frmreporte.Show();
+            FrmUsuarioAdministrador frmusua = new FrmUsuarioAdministrador();
+            frmusua.MdiParent = this;
+            frmusua.Show();
         }
     }
 }

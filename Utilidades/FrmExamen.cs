@@ -22,6 +22,8 @@ namespace Utilidades
         public DataSet ds_respuestas_correctas;
         public int calificacion;
         public char calificacion_letra;
+        public int contador_preguntas;
+        public string texto_contador_preguntas;
 
 
 
@@ -45,7 +47,7 @@ namespace Utilidades
             for (int i = 0; i < ds_respuestas_correctas.Tables[0].Rows.Count; i++)
             {
                 texto = this.ds_respuestas_correctas.Tables[0].Rows[i]["respuesta"].ToString();
-                lblresp.Text+= "\n" + texto;
+                //lblresp.Text+= "\n" + texto;
                 respuestas_correcta.Add(texto);
 
             }
@@ -64,9 +66,13 @@ namespace Utilidades
         public FrmExamen(string ch_matricula)
         {
             InitializeComponent();
+            this.texto_contador_preguntas = "Pregunta # ";
             this.matricula = ch_matricula;
             this.calificacion = 0;
+            this.contador_preguntas = 0;
             this.preguntas = utilidades.generar_preguntas();
+
+            /*
             lblprueba.Text = "";
             
             //prueba
@@ -75,10 +81,15 @@ namespace Utilidades
                 lblprueba.Text += i.ToString();
 
             }
+             * */
 
             make_preguntas();
 
             make_respuestas();
+            this.lblnumpregunta.Text = "";
+            this.contador_preguntas++;
+            lblnumpregunta.Text += this.texto_contador_preguntas + contador_preguntas.ToString();
+
 
         }
 
@@ -99,7 +110,7 @@ namespace Utilidades
                     {
                        
                         this.calificacion = this.calificacion + 5;
-                        lblcalificacion.Text = aux +  Convert.ToString(this.calificacion);
+                        //lblcalificacion.Text = aux +  Convert.ToString(this.calificacion);
                     }
 
                 }
@@ -111,7 +122,7 @@ namespace Utilidades
                     {
 
                         this.calificacion = this.calificacion + 5;
-                        lblcalificacion.Text = aux + Convert.ToString(this.calificacion);
+                        //lblcalificacion.Text = aux + Convert.ToString(this.calificacion);
                     }
 
                 }
@@ -123,7 +134,7 @@ namespace Utilidades
                     {
 
                         this.calificacion = this.calificacion + 5;
-                        lblcalificacion.Text = aux + Convert.ToString(this.calificacion);
+                        //lblcalificacion.Text = aux + Convert.ToString(this.calificacion);
                     }
 
                 }
@@ -135,14 +146,17 @@ namespace Utilidades
                     {
 
                         this.calificacion = this.calificacion + 5;
-                        lblcalificacion.Text = aux + Convert.ToString(this.calificacion);
+                        //lblcalificacion.Text = aux + Convert.ToString(this.calificacion);
                     }
 
                 }
 
-
+                this.rbresp1.Checked = true;
                 make_preguntas();
                 make_respuestas();
+                this.lblnumpregunta.Text = "";
+                this.contador_preguntas++;
+                lblnumpregunta.Text += this.texto_contador_preguntas + contador_preguntas.ToString();
                 
             }
             else
@@ -156,7 +170,7 @@ namespace Utilidades
                 string cmd = string.Format("exec SPACTEXAMEN '{0}', '{1}', '{2}'", this.matricula, this.calificacion, this.calificacion_letra);
                 ds = utilidades.ejecuta(cmd);
                 
-                MessageBox.Show("El examen ha Termininado");
+                MessageBox.Show("El examen ha Terminado");
                 // generar reporte
 
 
@@ -185,6 +199,11 @@ namespace Utilidades
         private void timer1_Tick(object sender, EventArgs e)
         {
             
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

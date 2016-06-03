@@ -30,13 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.DataSetExamen = new Utilidades.DataSetExamen();
             this.sptodos_datos_examenBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DataSetExamen = new Utilidades.DataSetExamen();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.sptodos_datos_examenTableAdapter = new Utilidades.DataSetExamenTableAdapters.sptodos_datos_examenTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.DataSetExamen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sptodos_datos_examenBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSetExamen)).BeginInit();
             this.SuspendLayout();
+            // 
+            // sptodos_datos_examenBindingSource
+            // 
+            this.sptodos_datos_examenBindingSource.DataMember = "sptodos_datos_examen";
+            this.sptodos_datos_examenBindingSource.DataSource = this.DataSetExamen;
+            // 
+            // DataSetExamen
+            // 
+            this.DataSetExamen.DataSetName = "DataSetExamen";
+            this.DataSetExamen.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -50,31 +60,23 @@
             this.reportViewer1.Size = new System.Drawing.Size(604, 473);
             this.reportViewer1.TabIndex = 0;
             // 
-            // DataSetExamen
-            // 
-            this.DataSetExamen.DataSetName = "DataSetExamen";
-            this.DataSetExamen.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sptodos_datos_examenBindingSource
-            // 
-            this.sptodos_datos_examenBindingSource.DataMember = "sptodos_datos_examen";
-            this.sptodos_datos_examenBindingSource.DataSource = this.DataSetExamen;
-            // 
             // sptodos_datos_examenTableAdapter
             // 
             this.sptodos_datos_examenTableAdapter.ClearBeforeFill = true;
             // 
-            // FrmReporteExamen
+            // FrmReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(604, 473);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "FrmReporteExamen";
+            this.Name = "FrmReportes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmReporteExamen";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmReporteExamen_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DataSetExamen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sptodos_datos_examenBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSetExamen)).EndInit();
             this.ResumeLayout(false);
 
         }

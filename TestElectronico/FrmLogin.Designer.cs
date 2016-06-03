@@ -32,21 +32,21 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btncerrarstudent = new System.Windows.Forms.Button();
+            this.btncancelarstudent = new System.Windows.Forms.Button();
+            this.btnaceptarstudent = new System.Windows.Forms.Button();
+            this.txtmatricula = new Utilidades.textbox(this.components);
+            this.label5 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btn_cerrar_user = new System.Windows.Forms.Button();
+            this.txtcontraseña = new Utilidades.textbox(this.components);
+            this.txtusuario = new Utilidades.textbox(this.components);
             this.btn_cancelar_user = new System.Windows.Forms.Button();
             this.btnaceptar_user = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtcontraseña = new Utilidades.textbox(this.components);
-            this.txtusuario = new Utilidades.textbox(this.components);
-            this.txtmatricula = new Utilidades.textbox(this.components);
-            this.label5 = new System.Windows.Forms.Label();
-            this.btncerrarstudent = new System.Windows.Forms.Button();
-            this.btncancelarstudent = new System.Windows.Forms.Button();
-            this.btnaceptarstudent = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -78,6 +78,60 @@
             this.tabPage1.Text = "Estudiantes";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // btncerrarstudent
+            // 
+            this.btncerrarstudent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btncerrarstudent.Image = ((System.Drawing.Image)(resources.GetObject("btncerrarstudent.Image")));
+            this.btncerrarstudent.Location = new System.Drawing.Point(328, 200);
+            this.btncerrarstudent.Name = "btncerrarstudent";
+            this.btncerrarstudent.Size = new System.Drawing.Size(110, 86);
+            this.btncerrarstudent.TabIndex = 21;
+            this.btncerrarstudent.Text = "Cerrar";
+            this.btncerrarstudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btncerrarstudent.UseVisualStyleBackColor = true;
+            // 
+            // btncancelarstudent
+            // 
+            this.btncancelarstudent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btncancelarstudent.Image = ((System.Drawing.Image)(resources.GetObject("btncancelarstudent.Image")));
+            this.btncancelarstudent.Location = new System.Drawing.Point(194, 200);
+            this.btncancelarstudent.Name = "btncancelarstudent";
+            this.btncancelarstudent.Size = new System.Drawing.Size(110, 86);
+            this.btncancelarstudent.TabIndex = 20;
+            this.btncancelarstudent.Text = "Cancelar";
+            this.btncancelarstudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btncancelarstudent.UseVisualStyleBackColor = true;
+            // 
+            // btnaceptarstudent
+            // 
+            this.btnaceptarstudent.Image = ((System.Drawing.Image)(resources.GetObject("btnaceptarstudent.Image")));
+            this.btnaceptarstudent.Location = new System.Drawing.Point(60, 200);
+            this.btnaceptarstudent.Name = "btnaceptarstudent";
+            this.btnaceptarstudent.Size = new System.Drawing.Size(110, 86);
+            this.btnaceptarstudent.TabIndex = 19;
+            this.btnaceptarstudent.Text = "Aceptar";
+            this.btnaceptarstudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnaceptarstudent.UseVisualStyleBackColor = true;
+            this.btnaceptarstudent.Click += new System.EventHandler(this.btnaceptarstudent_Click);
+            // 
+            // txtmatricula
+            // 
+            this.txtmatricula.Location = new System.Drawing.Point(207, 71);
+            this.txtmatricula.Name = "txtmatricula";
+            this.txtmatricula.Size = new System.Drawing.Size(176, 20);
+            this.txtmatricula.TabIndex = 18;
+            this.txtmatricula.validar = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(61, 71);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(109, 25);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Matricula";
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.btn_cerrar_user);
@@ -108,6 +162,23 @@
             this.btn_cerrar_user.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_cerrar_user.UseVisualStyleBackColor = true;
             this.btn_cerrar_user.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // txtcontraseña
+            // 
+            this.txtcontraseña.Location = new System.Drawing.Point(342, 157);
+            this.txtcontraseña.Name = "txtcontraseña";
+            this.txtcontraseña.PasswordChar = '•';
+            this.txtcontraseña.Size = new System.Drawing.Size(176, 20);
+            this.txtcontraseña.TabIndex = 15;
+            this.txtcontraseña.validar = false;
+            // 
+            // txtusuario
+            // 
+            this.txtusuario.Location = new System.Drawing.Point(342, 70);
+            this.txtusuario.Name = "txtusuario";
+            this.txtusuario.Size = new System.Drawing.Size(176, 20);
+            this.txtusuario.TabIndex = 14;
+            this.txtusuario.validar = false;
             // 
             // btn_cancelar_user
             // 
@@ -175,77 +246,6 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Log-In";
             // 
-            // txtcontraseña
-            // 
-            this.txtcontraseña.Location = new System.Drawing.Point(342, 157);
-            this.txtcontraseña.Name = "txtcontraseña";
-            this.txtcontraseña.PasswordChar = '•';
-            this.txtcontraseña.Size = new System.Drawing.Size(176, 20);
-            this.txtcontraseña.TabIndex = 15;
-            this.txtcontraseña.validar = false;
-            // 
-            // txtusuario
-            // 
-            this.txtusuario.Location = new System.Drawing.Point(342, 70);
-            this.txtusuario.Name = "txtusuario";
-            this.txtusuario.Size = new System.Drawing.Size(176, 20);
-            this.txtusuario.TabIndex = 14;
-            this.txtusuario.validar = false;
-            // 
-            // txtmatricula
-            // 
-            this.txtmatricula.Location = new System.Drawing.Point(207, 71);
-            this.txtmatricula.Name = "txtmatricula";
-            this.txtmatricula.Size = new System.Drawing.Size(176, 20);
-            this.txtmatricula.TabIndex = 18;
-            this.txtmatricula.validar = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(61, 71);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 25);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "Matricula";
-            // 
-            // btncerrarstudent
-            // 
-            this.btncerrarstudent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btncerrarstudent.Image = ((System.Drawing.Image)(resources.GetObject("btncerrarstudent.Image")));
-            this.btncerrarstudent.Location = new System.Drawing.Point(328, 200);
-            this.btncerrarstudent.Name = "btncerrarstudent";
-            this.btncerrarstudent.Size = new System.Drawing.Size(110, 86);
-            this.btncerrarstudent.TabIndex = 21;
-            this.btncerrarstudent.Text = "Cerrar";
-            this.btncerrarstudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btncerrarstudent.UseVisualStyleBackColor = true;
-            // 
-            // btncancelarstudent
-            // 
-            this.btncancelarstudent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btncancelarstudent.Image = ((System.Drawing.Image)(resources.GetObject("btncancelarstudent.Image")));
-            this.btncancelarstudent.Location = new System.Drawing.Point(194, 200);
-            this.btncancelarstudent.Name = "btncancelarstudent";
-            this.btncancelarstudent.Size = new System.Drawing.Size(110, 86);
-            this.btncancelarstudent.TabIndex = 20;
-            this.btncancelarstudent.Text = "Cancelar";
-            this.btncancelarstudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btncancelarstudent.UseVisualStyleBackColor = true;
-            // 
-            // btnaceptarstudent
-            // 
-            this.btnaceptarstudent.Image = ((System.Drawing.Image)(resources.GetObject("btnaceptarstudent.Image")));
-            this.btnaceptarstudent.Location = new System.Drawing.Point(60, 200);
-            this.btnaceptarstudent.Name = "btnaceptarstudent";
-            this.btnaceptarstudent.Size = new System.Drawing.Size(110, 86);
-            this.btnaceptarstudent.TabIndex = 19;
-            this.btnaceptarstudent.Text = "Aceptar";
-            this.btnaceptarstudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnaceptarstudent.UseVisualStyleBackColor = true;
-            this.btnaceptarstudent.Click += new System.EventHandler(this.btnaceptarstudent_Click);
-            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -254,6 +254,7 @@
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);
             this.Name = "FrmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmLogin";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
